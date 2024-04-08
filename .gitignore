@@ -23,5 +23,5 @@ yarn-debug.log*
 yarn-error.log*
 
 .md
-easybank-landing-pages
-design
+/design
+/elp
