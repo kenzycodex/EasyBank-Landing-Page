@@ -4,7 +4,7 @@ import { ReactComponent as Hamburger } from './images/icon-hamburger.svg';
 import { ReactComponent as Online } from './images/icon-online.svg';
 import { ReactComponent as Budget } from './images/icon-budgeting.svg';
 import { ReactComponent as Onboarding } from './images/icon-onboarding.svg';
-import { ReactComponent as API } from './images/icon-api.svg';
+import { ReactComponent as Api } from './images/icon-api.svg';
 import { ReactComponent as Facebook } from './images/icon-facebook.svg';
 import { ReactComponent as Youtube } from './images/icon-youtube.svg';
 import { ReactComponent as Twitter } from './images/icon-twitter.svg';
@@ -72,7 +72,7 @@ function Main() {
             </p>
           </div>
           <div>
-            <API />
+            <Api />
             <h2>Open API</h2>
             <p>
               Manage your savings, investments, pension, and much more from one account. Tracking
