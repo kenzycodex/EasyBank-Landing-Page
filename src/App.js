@@ -1,4 +1,3 @@
-import './App.css';
 import { ReactComponent as Logo } from './images/logo.svg';
 import { ReactComponent as Hamburger } from './images/icon-hamburger.svg';
 import { ReactComponent as Online } from './images/icon-online.svg';
@@ -23,7 +22,7 @@ export default function App() {
 
 function Header() {
   return (
-    <header>
+    <header className="flex justify-between">
       <Logo />
       <Hamburger />
     </header>
