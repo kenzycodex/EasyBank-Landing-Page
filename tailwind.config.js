@@ -26,7 +26,13 @@ module.exports = {
       bold: '700',
     },
     fontSize: {
-      base: '18px',
+      base: [
+        '18px',
+        {
+          lineHeight: '1.5',
+          fontWeight: '400',
+        },
+      ],
     },
     extend: {},
   },
