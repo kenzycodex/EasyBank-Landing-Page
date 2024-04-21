@@ -2,7 +2,7 @@ import { easyBank, latestArticles } from './easyBank';
 
 export default function App() {
   return (
-    <div className="font-Sans text-center">
+    <div className="font-Sans text-center relative">
       <EasyBankApp />
     </div>
   );
@@ -12,6 +12,7 @@ function EasyBankApp() {
   return (
     <>
       <Header />
+      <Modal />
       <Body />
       <Footer />
     </>
@@ -53,6 +54,32 @@ function Header() {
   );
 }
 
+function Modal() {
+  return (
+    <div className="absolute top-0 left-0 bg-blue/80 h-full w-full desktop:hidden">
+      <div className="fixed top-[10%] left-1/2 -translate-x-1/2 bg-white w-4/5 mx-auto py-8 rounded-md">
+        <ul className="flex flex-col gap-6 text-blue">
+          <li>
+            <a href="#home">Home</a>
+          </li>
+          <li>
+            <a href="#company">About</a>
+          </li>
+          <li>
+            <a href="#contact">Contact</a>
+          </li>
+          <li>
+            <a href="#blog">Blog</a>
+          </li>
+          <li>
+            <a href="#careers">Careers</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  );
+}
+
 function Body() {
   return (
     <>
@@ -69,9 +96,8 @@ function NextGen() {
       <img
         src="./images/image-mockups.png"
         alt="mockupImage"
-        className="sm:h-[30rem] m-auto absolute top-[-100px] p-5 w-auto"
+        className="m-auto absolute p-5 w-auto mobile:h-[33rem] mobile:top-[-7.55rem] tablet:h-[59rem] tablet:top-[-15.5rem]"
       />
-
       <h1 className=" text-[2.5rem] text-blue font-light leading-normal w-auto mx-auto">
         Next generation digital banking
       </h1>
@@ -79,7 +105,7 @@ function NextGen() {
         Take your financial life online. Your Easybank account will be a one-stop-shop for spending,
         saving, budgeting, investing, and much more.
       </p>
-      <div className=" bg-gradient-to-r from-green to-cyan text-white px-9 py-3 rounded-full cursor-pointer">
+      <div className="bg-gradient-to-r from-green to-cyan  text-white px-9 py-3 rounded-full cursor-pointer hover:opacity-40 ">
         Request Invite
       </div>
     </div>
@@ -138,7 +164,7 @@ function Articles() {
 function Article({ image, author, title, article, alt }) {
   return (
     <div className="flex flex-col items-center justify-center w-auto px-5 bg-gray-200 cursor-pointer">
-      <img src={image} alt={alt} className="w-auto rounded-t-[0.5rem]" />
+      <img src={image} alt={alt} className="w-full rounded-t-[0.5rem]" />
 
       <div className="h-auto flex flex-col justify-center items-start text-justify bg-white p-7 gap-2">
         <p className="font-light text-[0.5rem] text-gray-300">By {author}</p>
@@ -252,7 +278,7 @@ function Footer() {
         </ul>
       </div>
 
-      <div class="bg-gradient-to-r from-green to-cyan  px-9 py-3 my-5 rounded-full cursor-pointer ">
+      <div class="bg-gradient-to-r from-green to-cyan  px-9 py-3 my-5 rounded-full cursor-pointer  hover:opacity-45">
         Request Invite
       </div>
       <p className="text-gray-300">&copy; EasyBank. All Rights Reserved</p>
