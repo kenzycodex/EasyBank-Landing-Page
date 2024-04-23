@@ -19,23 +19,25 @@ function EasyBankApp() {
 
   return (
     <>
-      <Header isOpen={isOpen} handlerOpen={handlerOpen} />
-      <Modal isOpen={isOpen} />
+      <Nav isOpen={isOpen} handlerOpen={handlerOpen} />
+      <Header />
       <Body />
       <Footer />
     </>
   );
 }
 
-function Header({ isOpen, handlerOpen }) {
+function Nav({ isOpen, handlerOpen }) {
   return (
     <>
-      <header className="w-full h-auto flex flex-row bg-white bg-opacity-95 justify-between items-center py-3 px-5 fixed z-10">
-        <nav className="flex mobile:justify-between desktop:justify-evenly items-center w-full">
+      <nav className="w-full flex bg-white bg-opacity-95 desktop:bg-opacity-100 mobile:justify-between desktop:justify-around items-center py-3 px-7 fixed desktop:absolute z-10">
+        {/* <div className="flex mobile:justify-between desktop:justify-around items-center w-full"> */}
+        <div className="flex place-items-center">
           <svg xmlns="http://www.w3.org/2000/svg" width="139" height="20">
             <defs>
               <linearGradient id="a" x1="72.195%" x2="17.503%" y1="0%" y2="100%">
                 <stop offset="0%" stopColor="#33D35E" />
+
                 <stop offset="100%" stopColor="#2AB6D9" />
               </linearGradient>
             </defs>
@@ -52,69 +54,66 @@ function Header({ isOpen, handlerOpen }) {
               </g>
             </g>
           </svg>
-          <div className="hidden desktop:block">
-            <ul className="flex justify-center items-center gap-x-4 text-gray-300 font-light">
-              <li className="px-5 hover:border-solid hover:border-y-8 hover:border-green ">
-                <a href="#home">Home</a>
-              </li>
-              <li className="px-5">
-                <a href="#about">About</a>
-              </li>
-              <li className="px-5">
-                <a href="#contact">Contact</a>
-              </li>
-              <li className="px-5">
-                <a href="#blog">Blog</a>
-              </li>
-              <li className="px-5">
-                <a href="#careers">Careers</a>
-              </li>
-            </ul>
-          </div>
-          <div className="bg-gradient-to-r from-green to-cyan  text-white px-9 py-3 rounded-full cursor-pointer hover:opacity-40 hidden desktop:block">
-            Request Invite
-          </div>
-          <div className="flex w-auto h-auto cursor-pointer desktop:hidden" onClick={handlerOpen}>
-            {!isOpen ? (
-              <img src="./images/icon-hamburger.svg" alt="menu" />
-            ) : (
-              <img src="./images/icon-close.svg" alt="close" />
-            )}
-          </div>
+        </div>
+        <nav className="hidden desktop:block">
+          <ul className="flex flex-row place-items-center gap-x-4 font-light text-gray-300">
+            <li className="hover:text-blue hover:font-normal">
+              <a href="#home">Home</a>
+            </li>
+            <li className="hover:text-blue hover:font-normal">
+              <a href="#about">About</a>
+            </li>
+            <li className="hover:text-blue hover:font-normal">
+              <a href="#contact">Contact</a>
+            </li>
+            <li className="hover:text-blue hover:font-normal">
+              <a href="#blog">Blog</a>
+            </li>
+            <li className="hover:text-blue hover:font-normal">
+              <a href="#careers">Careers</a>
+            </li>
+          </ul>
         </nav>
-      </header>
-      <NextGen />
+        <div className="bg-gradient-to-r from-green to-cyan  text-white px-9 py-3 rounded-full cursor-pointer hover:opacity-40 hidden desktop:block">
+          Request Invite
+        </div>
+        <div className="flex w-auto h-auto cursor-pointer desktop:hidden" onClick={handlerOpen}>
+          {!isOpen ? (
+            <img src="./images/icon-hamburger.svg" alt="menu" />
+          ) : (
+            <img src="./images/icon-close.svg" alt="close" />
+          )}
+        </div>
+      </nav>
+      {isOpen ? <Modal /> : null}
     </>
   );
 }
 
-function Modal({ isOpen }) {
+function Modal() {
   return (
-    <>
-      {isOpen ? (
-        <div className="absolute top-0 left-0 bg-blue/80 h-full w-full desktop:hidden">
-          <div className="fixed top-[10%] left-1/2 -translate-x-1/2 bg-white w-4/5 mx-auto py-8 tablet:py-10 rounded-md ">
-            <ul className="flex flex-col gap-6  text-blue">
-              <li>
-                <a href="#home">Home</a>
-              </li>
-              <li>
-                <a href="#company">About</a>
-              </li>
-              <li>
-                <a href="#contact">Contact</a>
-              </li>
-              <li>
-                <a href="#blog">Blog</a>
-              </li>
-              <li>
-                <a href="#careers">Careers</a>
-              </li>
-            </ul>
-          </div>
-        </div>
-      ) : null}
-    </>
+    <div className="absolute z-10 top-10 left-0 bg-blue/80 h-full w-full desktop:hidden">
+      {/* // <div className="bg-blue/85 absolute top-[-10] left-0 w-full h-full desktop:hidden"> */}
+      <div className="fixed z-30 top-[10%] left-1/2 -translate-x-1/2 bg-white w-4/5 mx-auto py-8 tablet:py-10 rounded-md ">
+        <ul className="flex flex-col gap-6  text-blue">
+          <li>
+            <a href="#home">Home</a>
+          </li>
+          <li>
+            <a href="#company">About</a>
+          </li>
+          <li>
+            <a href="#contact">Contact</a>
+          </li>
+          <li>
+            <a href="#blog">Blog</a>
+          </li>
+          <li>
+            <a href="#careers">Careers</a>
+          </li>
+        </ul>
+      </div>
+    </div>
   );
 }
 
@@ -127,24 +126,28 @@ function Body() {
   );
 }
 
-function NextGen() {
+function Header() {
   return (
     <div className="relative flex mobile:flex-col justify-center items-center mb-32 ">
-      <img src="./images/bg-intro-mobile.svg" alt="intro" className="w-full" />
-      <img
-        src="./images/image-mockups.png"
-        alt="mockupImage"
-        className="m-auto absolute p-5 w-auto mobile:h-[33rem] mobile:top-[-7.55rem] tablet:h-[59rem] tablet:top-[-15.5rem]"
-      />
-      <h1 className=" text-[2.5rem] text-blue font-light leading-normal w-auto mx-auto">
-        Next generation digital banking
-      </h1>
-      <p className="text-gray-300 py-[2rem] w-auto mx-auto px-5 text-base text-justify">
-        Take your financial life online. Your Easybank account will be a one-stop-shop for spending,
-        saving, budgeting, investing, and much more.
-      </p>
-      <div className="bg-gradient-to-r from-green to-cyan  text-white px-9 py-3 rounded-full cursor-pointer hover:opacity-40 ">
-        Request Invite
+      <div className="w-full">
+        <img src="./images/bg-intro-mobile.svg" alt="intro" className="w-full" />
+        <img
+          src="./images/image-mockups.png"
+          alt="mockupImage"
+          className="m-auto absolute p-5 w-auto mobile:h-[33rem] mobile:top-[-7.55rem] tablet:h-[59rem] tablet:top-[-15.5rem]"
+        />
+      </div>
+      <div>
+        <h1 className=" text-[2.5rem] text-blue font-light leading-normal w-auto mx-auto">
+          Next generation digital banking
+        </h1>
+        <p className="text-gray-300 py-[2rem] w-auto mx-auto px-5 text-base text-justify">
+          Take your financial life online. Your Easybank account will be a one-stop-shop for
+          spending, saving, budgeting, investing, and much more.
+        </p>
+        <div className="w-1/2 mx-auto bg-gradient-to-r from-green to-cyan  text-white px-9 py-3 rounded-full cursor-pointer hover:opacity-40 ">
+          Request Invite
+        </div>
       </div>
     </div>
   );
