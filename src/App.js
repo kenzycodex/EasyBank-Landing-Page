@@ -3,7 +3,7 @@ import { easyBank, latestArticles } from './easyBank';
 
 export default function App() {
   return (
-    <div className="font-Sans text-center relative">
+    <div className="font-Sans text-blue text-center relative">
       <EasyBankApp />
     </div>
   );
@@ -30,9 +30,8 @@ function EasyBankApp() {
 function Nav({ isOpen, handlerOpen }) {
   return (
     <>
-      <nav className="w-full flex bg-white bg-opacity-95 desktop:bg-opacity-100 mobile:justify-between desktop:justify-around items-center py-3 px-7 fixed desktop:absolute z-10">
-        {/* <div className="flex mobile:justify-between desktop:justify-around items-center w-full"> */}
-        <div className="flex place-items-center">
+      <nav className="fixed w-full desktop:h-[5.2rem] py-5 flex bg-white bg-opacity-95 desktop:bg-opacity-100 mobile:justify-between mobile:px-4 desktop:justify-around mobile:items-center desktop:absolute z-20">
+        <div className="w-fit">
           <svg xmlns="http://www.w3.org/2000/svg" width="139" height="20">
             <defs>
               <linearGradient id="a" x1="72.195%" x2="17.503%" y1="0%" y2="100%">
@@ -55,29 +54,48 @@ function Nav({ isOpen, handlerOpen }) {
             </g>
           </svg>
         </div>
-        <nav className="hidden desktop:block">
-          <ul className="flex flex-row place-items-center gap-x-4 font-light text-gray-300">
-            <li className="hover:text-blue hover:font-normal">
-              <a href="#home">Home</a>
+        <nav className="hidden desktop:block h-auto">
+          <ul className="flex flex-row justify-center items-center gap-x-8">
+            <li className="">
+              <a href="#home" className="pb-8 hover:text-blue hover:border-b-4 hover:border-green">
+                Home
+              </a>
             </li>
-            <li className="hover:text-blue hover:font-normal">
-              <a href="#about">About</a>
+            <li>
+              <a
+                href="#about"
+                className=" pb-8 hover:text-blue hover:border-b-4 hover:border-green"
+              >
+                About
+              </a>
             </li>
-            <li className="hover:text-blue hover:font-normal">
-              <a href="#contact">Contact</a>
+            <li>
+              <a
+                href="#contact"
+                className=" pb-8 hover:text-blue hover:border-b-4 hover:border-green"
+              >
+                Contact
+              </a>
             </li>
-            <li className="hover:text-blue hover:font-normal">
-              <a href="#blog">Blog</a>
+            <li>
+              <a href="#blog" className=" pb-8 hover:text-blue hover:border-b-4 hover:border-green">
+                Blog
+              </a>
             </li>
-            <li className="hover:text-blue hover:font-normal">
-              <a href="#careers">Careers</a>
+            <li>
+              <a
+                href="#careers"
+                className=" pb-8 hover:text-blue hover:border-b-4 hover:border-green"
+              >
+                Careers
+              </a>
             </li>
           </ul>
         </nav>
-        <div className="bg-gradient-to-r from-green to-cyan  text-white px-9 py-3 rounded-full cursor-pointer hover:opacity-40 hidden desktop:block">
+        <div className="hidden desktop:flex desktop:justify-center desktop:items-center h-auto bg-gradient-to-r from-green to-cyan  text-white px-9 py-3 rounded-full cursor-pointer hover:opacity-40">
           Request Invite
         </div>
-        <div className="flex w-auto h-auto cursor-pointer desktop:hidden" onClick={handlerOpen}>
+        <div className="w-[2rem] cursor-pointer desktop:hidden" onClick={handlerOpen}>
           {!isOpen ? (
             <img src="./images/icon-hamburger.svg" alt="menu" />
           ) : (
@@ -85,7 +103,7 @@ function Nav({ isOpen, handlerOpen }) {
           )}
         </div>
       </nav>
-      {isOpen ? <Modal /> : null}
+      {isOpen && <Modal />}
     </>
   );
 }
@@ -93,23 +111,32 @@ function Nav({ isOpen, handlerOpen }) {
 function Modal() {
   return (
     <div className="absolute z-10 top-10 left-0 bg-blue/80 h-full w-full desktop:hidden">
-      {/* // <div className="bg-blue/85 absolute top-[-10] left-0 w-full h-full desktop:hidden"> */}
-      <div className="fixed z-30 top-[10%] left-1/2 -translate-x-1/2 bg-white w-4/5 mx-auto py-8 tablet:py-10 rounded-md ">
-        <ul className="flex flex-col gap-6  text-blue">
+      <div className="fixed z-30 top-[15%] left-1/2 -translate-x-1/2 bg-white text-blue w-4/5 mx-auto py-8 tablet:py-10 rounded-md ">
+        <ul className="flex flex-col gap-6">
           <li>
-            <a href="#home">Home</a>
+            <a href="#home" className="hover:text-green/80">
+              Home
+            </a>
           </li>
           <li>
-            <a href="#company">About</a>
+            <a href="#company" className="hover:text-green/80">
+              About
+            </a>
           </li>
           <li>
-            <a href="#contact">Contact</a>
+            <a href="#contact" className="hover:text-green/80">
+              Contact
+            </a>
           </li>
           <li>
-            <a href="#blog">Blog</a>
+            <a href="#blog" className="hover:text-green/80">
+              Blog
+            </a>
           </li>
           <li>
-            <a href="#careers">Careers</a>
+            <a href="#careers" className="hover:text-green/80">
+              Careers
+            </a>
           </li>
         </ul>
       </div>
@@ -138,7 +165,7 @@ function Header() {
         />
       </div>
       <div>
-        <h1 className=" text-[2.5rem] text-blue font-light leading-normal w-auto mx-auto">
+        <h1 className=" text-[2.5rem] font-light leading-normal w-auto mx-auto">
           Next generation digital banking
         </h1>
         <p className="text-gray-300 py-[2rem] w-auto mx-auto px-5 text-base text-justify">
@@ -155,38 +182,46 @@ function Header() {
 
 function EasyBank() {
   return (
-    <main className="py-12 flex flex-col items-center justify-center gap-5 bg-gray-200">
-      <h1 className=" text-[2.5rem] text-blue font-light leading-normal w-auto mx-auto">
-        Why choose Easybank?
-      </h1>
-      <p className="text-gray-300 w-auto mx-auto px-5 text-base ">
-        We leverage Open Banking to turn your bank account into your financial hub. Control your
-        finances like never before.
-      </p>
-      {easyBank.map((bank) => (
-        <Bank image={bank.image} title={bank.title} text={bank.text} key={bank.title} />
-      ))}
+    <main className="p-12 bg-gray-200  desktop:p-36 ">
+      <div className="font-light mb-10 desktop:text-justify desktop:w-1/2">
+        <h1 className="mobile:text-[2rem] desktop:text-[2.85rem] ">Why choose Easybank?</h1>
+        <p className="mobile:text-[1rem] desktop:text-[1.2rem] ">
+          We leverage Open Banking to turn your bank account into your financial hub. Control your
+          finances like never before.
+        </p>
+      </div>
+      <div className="flex basis-full flex-row justify-center items-center flex-wrap gap-6">
+        {easyBank.map((bank) => (
+          <Bank
+            image={bank.image}
+            title={bank.title}
+            text={bank.text}
+            alt={bank.alt}
+            key={bank.title}
+          />
+        ))}
+      </div>
     </main>
   );
 }
 
-function Bank({ image, title, text }) {
+function Bank({ image, alt, title, text }) {
   return (
-    <div className="flex flex-col items-center justify-center gap-4">
-      <img src={image} alt="" />
-      <h2 className=" text-blue text-[1.5rem]">{title}</h2>
-      <p className="text-gray-300 text-base px-3">{text}</p>
+    <div className="w-[20rem] desktop:text-start space-y-5 cursor-default desktop:hover:-translate-y-5 transition-all duration-500 ease-out">
+      <img src={image} alt={alt} className="mx-auto desktop:mx-0" />
+      <h2 className="text-[1.5rem]">{title}</h2>
+      <p className="text-gray-300 text-base">{text}</p>
     </div>
   );
 }
 
 function Articles() {
   return (
-    <aside className="bg-gray-200 pb-16">
-      <h1 className="text-[2.3rem] text-blue bg-gray-100 font-light leading-normal px-auto py-8">
+    <aside className="bg-gray-100 mobile:p-[1rem] desktop:p-36 w-full ">
+      <h1 className="mobile:text-[2rem] desktop:text-[2.85rem] font-light mb-10 desktop:text-start">
         Latest Articles
       </h1>
-      <div className="flex flex-col items-center justify-center gap-y-5 ">
+      <div className="flex basis-full flex-row flex-wrap gap-6">
         {latestArticles.map((article) => (
           <Article
             image={article.image}
@@ -204,14 +239,22 @@ function Articles() {
 
 function Article({ image, author, title, article, alt }) {
   return (
-    <div className="flex flex-col items-center justify-center w-auto px-5 bg-gray-200 cursor-pointer">
-      <img src={image} alt={alt} className="w-full rounded-t-[0.5rem]" />
+    <div className=" w-[20rem] bg-gray-100 cursor-pointer desktop:hover:scale-105 desktop:hover:shadow-xl transition-all duration-500 ease-out">
+      <div className="w-full mx-auto">
+        <img
+          src={image}
+          alt={alt}
+          className="w-full mobile:h-[15rem] desktop:h-[20rem] rounded-t-[0.9rem]"
+        />
 
-      <div className="h-auto flex flex-col justify-center items-start text-justify bg-white p-7 gap-2">
-        <p className="font-light text-[0.5rem] text-gray-300">By {author}</p>
-        <h2 className="text-blue hover:text-green">{title}</h2>
+        <div className="flex basis-full flex-col justify-center items-start text-start bg-white p-7 gap-2">
+          <p className="font-light text-[0.5rem] desktop:text-[0.9rem] text-gray-300">
+            By {author}
+          </p>
+          <h2 className=" text-[0.9rem] desktop:text-[1.3rem] hover:text-green">{title}</h2>
 
-        <p className="font-light text-[0.9rem] text-gray-300">{article}</p>
+          <p className="font-light text-[0.9rem] desktop:text-[1rem] text-gray-300">{article}</p>
+        </div>
       </div>
     </div>
   );
@@ -219,8 +262,8 @@ function Article({ image, author, title, article, alt }) {
 
 function Footer() {
   return (
-    <footer className="bg-blue text-white flex flex-col justify-center items-center py-10">
-      <div className="py-7">
+    <footer className="bg-blue text-white flex flex-col desktop:flex-row flex-wrap mobile:justify-center desktop:justify-around items-center py-10">
+      <div className="py-7 flex flex-col gap-14">
         <svg xmlns="http://www.w3.org/2000/svg" width="139" height="20">
           <defs>
             <linearGradient id="a" x1="72.195%" x2="17.503%" y1="0%" y2="100%">
@@ -241,8 +284,7 @@ function Footer() {
             </g>
           </g>
         </svg>
-      </div>
-      <div>
+        {/* <div> */}
         <ul className="flex space-x-5">
           <li>
             <a href="#facebook">
@@ -295,9 +337,10 @@ function Footer() {
             </a>
           </li>
         </ul>
+        {/* </div> */}
       </div>
-      <div>
-        <ul className="py-5">
+      <div className="flex flex-col basis-[25rem] desktop:flex-row desktop:justify-around">
+        <ul className="">
           <li className="py-2 hover:text-green">
             <a href="#aboutUs">About Us</a>
           </li>
@@ -307,6 +350,8 @@ function Footer() {
           <li className="py-2 hover:text-green">
             <a href="#blog">Blog</a>
           </li>
+        </ul>
+        <ul className="">
           <li className="py-2 hover:text-green">
             <a href="#careers">Careers</a>
           </li>
@@ -318,11 +363,12 @@ function Footer() {
           </li>
         </ul>
       </div>
-
-      <div className="bg-gradient-to-r from-green to-cyan  px-9 py-3 my-5 rounded-full cursor-pointer  hover:opacity-45">
-        Request Invite
+      <div>
+        <div className="bg-gradient-to-r from-green to-cyan  px-9 py-3 my-5 rounded-full cursor-pointer  hover:opacity-45">
+          Request Invite
+        </div>
+        <p className="text-gray-300">&copy; EasyBank. All Rights Reserved</p>
       </div>
-      <p className="text-gray-300">&copy; EasyBank. All Rights Reserved</p>
     </footer>
   );
 }
