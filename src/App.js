@@ -207,7 +207,7 @@ function EasyBank() {
 
 function Bank({ image, alt, title, text }) {
   return (
-    <div className="w-[20rem] desktop:text-start space-y-5 cursor-default desktop:hover:-translate-y-5 transition-all duration-500 ease-out">
+    <div className="w-[21rem] desktop:text-start space-y-5 cursor-default desktop:hover:-translate-y-5 transition-all duration-500 ease-out">
       <img src={image} alt={alt} className="mx-auto desktop:mx-0" />
       <h2 className="text-[1.5rem]">{title}</h2>
       <p className="text-gray-300 text-base">{text}</p>
@@ -339,26 +339,26 @@ function Footer() {
         </ul>
         {/* </div> */}
       </div>
-      <div className="flex flex-col basis-[25rem] desktop:flex-row desktop:justify-around">
+      <div className="flex flex-col desktop:basis-[25rem] desktop:flex-row desktop:justify-around">
         <ul className="">
-          <li className="py-2 hover:text-green">
+          <li className="py-2 desktop:text-start hover:text-green">
             <a href="#aboutUs">About Us</a>
           </li>
-          <li className="py-2 hover:text-green">
+          <li className="py-2 desktop:text-start hover:text-green">
             <a href="#contact">Contact</a>
           </li>
-          <li className="py-2 hover:text-green">
+          <li className="py-2 desktop:text-start hover:text-green">
             <a href="#blog">Blog</a>
           </li>
         </ul>
         <ul className="">
-          <li className="py-2 hover:text-green">
+          <li className="py-2 desktop:text-start hover:text-green">
             <a href="#careers">Careers</a>
           </li>
-          <li className="py-2 hover:text-green">
+          <li className="py-2 desktop:text-start hover:text-green">
             <a href="#support">Support</a>
           </li>
-          <li className="py-2 hover:text-green">
+          <li className="py-2 desktop:text-start hover:text-green">
             <a href="#privacypolicy">Privacy Policy</a>
           </li>
         </ul>
