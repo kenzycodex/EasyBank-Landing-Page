@@ -12,7 +12,6 @@ This is a solution to the [Easybank landing page challenge on Frontend Mentor](h
   - [Built with](#built-with)
 - [Author](#author)
 
-
 ## Overview
 
 ### The challenge
