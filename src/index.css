@@ -4,26 +4,17 @@
 @tailwind components;
 @tailwind utilities;
 
-/* .modal li:hover: {
-  background-color: initial;
-  height: auto;
-}
-
-.modal a:hover {
-  background-image: linear-gradient(-60deg, cyan 45%, green 55%);
-  -webkit-background-clip: text;
-  color: transparent;
-}
-
-.menu:hover {
-  background-color: green;
-} */
-
-.nav {
-  padding: 1.75rem 0;
-}
-
-.nav:hover {
+.navBorder {
   color: hsl(233, 8%, 62%);
-  border-bottom: 4px solid lineargradient(to right, hsl(136, 65%, 51%), hsl(192, 70%, 51%));
+  transition-property: all;
+  transition-duration: 300ms;
+  transition-timing-function: ease-in;
+}
+
+.navBorder:hover {
+  color: hsl(233, 26%, 24%);
+  border-bottom: 4px solid;
+  border-image: linear-gradient(to right, hsl(136, 65%, 51%) 45%, hsl(192, 70%, 51%) 55%);
+  border-image-slice: 1;
+  padding-bottom: 2rem;
 }

@@ -4,8 +4,7 @@ module.exports = {
   theme: {
     screens: {
       mobile: '320px',
-      tablet: '768px',
-      desktop: '976px',
+      desktop: '768px',
     },
     colors: {
       white: 'hsl(0, 0%, 100%)',
