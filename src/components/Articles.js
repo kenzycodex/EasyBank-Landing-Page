@@ -7,7 +7,7 @@ export function Articles() {
       <h1 className="mobile:text-[2rem] desktop:text-[2.85rem] font-light mb-10 desktop:text-start">
         Latest Articles
       </h1>
-      <div className="flex basis-full flex-row flex-wrap gap-6">
+      <div className="flex basis-full mobile:flex-col desktop:flex-row gap-6 justify-center items-center">
         {latestArticles.map((article) => (
           <Article
             image={article.image}

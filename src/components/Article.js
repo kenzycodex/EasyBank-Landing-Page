@@ -2,11 +2,7 @@ export function Article({ image, author, title, article, alt }) {
   return (
     <div className=" w-[20rem] bg-gray-100 cursor-pointer desktop:hover:scale-105 desktop:hover:shadow-xl transition-all duration-500 ease-out">
       <div className="w-full mx-auto">
-        <img
-          src={image}
-          alt={alt}
-          className="w-full mobile:h-[15rem] desktop:h-[20rem] rounded-t-[0.9rem]"
-        />
+        <img src={image} alt={alt} className="w-full h-[15rem] rounded-t-[0.9rem]" />
 
         <div className="flex basis-full flex-col justify-center items-start text-start bg-white p-7 gap-2">
           <p className="font-light text-[0.5rem] desktop:text-[0.9rem] text-gray-300">
