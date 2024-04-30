@@ -107,7 +107,7 @@ export function Footer() {
           <p className="text-gray-300">&copy; EasyBank. All Rights Reserved</p>
         </div>
       </footer>
-      <div className="bg-blue text-gray-300 text-[1rem]">
+      <div className="bg-blue text-gray-300 text-[0.5rem]">
         Challenge by
         <a
           className="hover:text-gray-100"
@@ -118,11 +118,7 @@ export function Footer() {
           Frontend Mentor
         </a>
         . Coded by
-        <a className=" hover:text-gray-100" href="#">
-          {' '}
-          Oludire Damilare
-        </a>
-        .
+        <a className="hover:text-gray-100"> Oludire Damilare</a>.
       </div>
     </>
   );
