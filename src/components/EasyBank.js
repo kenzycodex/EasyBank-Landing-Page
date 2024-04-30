@@ -11,7 +11,7 @@ export function EasyBank() {
           finances like never before.
         </p>
       </div>
-      <div className="flex basis-full flex-row justify-center items-center flex-wrap gap-6">
+      <div className="flex basis-full mobile:flex-col desktop:flex-row gap-6 justify-center items-center">
         {easyBank.map((bank) => (
           <Bank
             image={bank.image}
