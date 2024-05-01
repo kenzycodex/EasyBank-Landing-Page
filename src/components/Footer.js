@@ -1,7 +1,9 @@
+import { RequestInvite } from './RequestInvite';
+
 export function Footer() {
   return (
     <>
-      <footer className="bg-blue text-white flex flex-col desktop:flex-row flex-wrap mobile:justify-center desktop:justify-around items-center py-10">
+      <footer className="bg-blue text-white flex flex-col desktop:flex-row flex-wrap mobile:justify-center desktop:justify-around items-center py-8">
         <div className="py-7 flex flex-col justify-center mobile:items-center desktop:items-start gap-14">
           <svg xmlns="http://www.w3.org/2000/svg" width="139" height="20">
             <defs>
@@ -100,26 +102,11 @@ export function Footer() {
             </li>
           </ul>
         </div>
-        <div>
-          <div className="bg-gradient-to-r from-green to-cyan  px-9 py-3 my-5 rounded-full cursor-pointer  hover:opacity-45">
-            Request Invite
-          </div>
+        <div className="flex flex-col space-y-10 pt-5 justify-center items-center">
+          <RequestInvite />
           <p className="text-gray-300">&copy; EasyBank. All Rights Reserved</p>
         </div>
       </footer>
-      <div className="bg-blue text-gray-300 text-[0.5rem]">
-        Challenge by
-        <a
-          className="hover:text-gray-100"
-          href="https://www.frontendmentor.io?ref=challenge"
-          target="_blank"
-        >
-          {' '}
-          Frontend Mentor
-        </a>
-        . Coded by
-        <a className="hover:text-gray-100"> Oludire Damilare</a>.
-      </div>
     </>
   );
 }
