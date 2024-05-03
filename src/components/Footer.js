@@ -3,7 +3,7 @@ import { RequestInvite } from './RequestInvite';
 export function Footer() {
   return (
     <>
-      <footer className="bg-blue text-white flex flex-col desktop:flex-row flex-wrap mobile:justify-center desktop:justify-around items-center py-8">
+      <footer className="bg-blue text-white flex flex-col desktop:flex-row flex-wrap mobile:justify-center desktop:justify-around items-center py-8 text-center">
         <div className="py-7 flex flex-col justify-center mobile:items-center desktop:items-start gap-14">
           <svg xmlns="http://www.w3.org/2000/svg" width="139" height="20">
             <defs>

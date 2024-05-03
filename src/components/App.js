@@ -5,11 +5,7 @@ import { Footer } from './Footer';
 import { Body } from './Body';
 
 export default function App() {
-  return (
-    <div className="font-Sans text-blue text-center relative">
-      <EasyBankApp />
-    </div>
-  );
+  return <EasyBankApp />;
 }
 
 function EasyBankApp() {

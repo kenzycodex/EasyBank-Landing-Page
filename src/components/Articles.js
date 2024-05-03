@@ -3,11 +3,11 @@ import { Article } from './Article';
 
 export function Articles() {
   return (
-    <aside className=" bg-gray-100 mobile:p-[1rem] desktop:p-[6.5rem] w-full ">
-      <h1 className="mobile:text-[2rem] desktop:text-[2.85rem] font-light mb-10 desktop:text-start">
+    <div className=" bg-gray-100 p-[1rem] desktop:p-[6.5rem] w-full ">
+      <h1 className="text-[2rem] desktop:text-[2.85rem] font-light mb-10 text-center desktop:text-start">
         Latest Articles
       </h1>
-      <div className="flex flex-row justify-center items-center flex-wrap gap-[3rem]">
+      <div className="grid place-items-center grid-flow-row md:grid-cols-2 desktop:grid-cols-4 gap-5">
         {latestArticles.map((article) => (
           <Article
             image={article.image}
@@ -19,6 +19,6 @@ export function Articles() {
           />
         ))}
       </div>
-    </aside>
+    </div>
   );
 }

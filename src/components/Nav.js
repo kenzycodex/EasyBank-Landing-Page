@@ -4,7 +4,7 @@ import { RequestInvite } from './RequestInvite';
 export function Nav({ isOpen, handlerOpen }) {
   return (
     <>
-      <nav className="fixed w-full desktop:h-[5.2rem] py-5 mobile:px-7 desktop:px-[6.5rem] flex bg-white bg-opacity-95 desktop:bg-opacity-100 justify-between items-center desktop:absolute z-20">
+      <div className="w-full h-[4rem] py-5 px-7 desktop:px-[6.5rem] flex bg-white bg-opacity-100 desktop:bg-opacity-100 justify-between items-center relative z-10">
         <div className="w-fit">
           <svg xmlns="http://www.w3.org/2000/svg" width="139" height="20">
             <defs>
@@ -29,7 +29,7 @@ export function Nav({ isOpen, handlerOpen }) {
           </svg>
         </div>
         <nav className="hidden desktop:block h-auto">
-          <ul className="flex flex-row justify-center items-center gap-x-10">
+          <ul className="flex flex-row justify-center items-center gap-x-[10%]">
             <li>
               <a href="#home" className="navBorder">
                 Home
@@ -61,16 +61,16 @@ export function Nav({ isOpen, handlerOpen }) {
           <RequestInvite />
         </div>
         <div
-          className=" cursor-pointer desktop:hidden transition-all duration-1000 ease-in-out"
+          className=" cursor-pointer desktop:hidden transition-all duration-300 ease-in-out"
           onClick={handlerOpen}
         >
           {!isOpen ? (
-            <img src="./images/icon-hamburger.svg" className="w-[1.5rem]" alt="menu" />
+            <img src="./images/icon-hamburger.svg" alt="menu" />
           ) : (
-            <img src="./images/icon-close.svg" className="w-[1.5rem] " alt="close" />
+            <img src="./images/icon-close.svg" alt="close" />
           )}
         </div>
-      </nav>
+      </div>
       {isOpen && <Modal />}
     </>
   );
