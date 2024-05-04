@@ -27,7 +27,7 @@ export function Footer() {
           </svg>
           <ul className="flex space-x-5">
             <li>
-              <a href="#facebook">
+              <a href="https://www.facebook.com">
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
                   className="h-[20px] w-[20px] fill-white hover:fill-green hover:stroke-green"
@@ -37,7 +37,7 @@ export function Footer() {
               </a>
             </li>
             <li>
-              <a href="#youtube">
+              <a href="https://www.youtube.com">
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
                   className="h-[20px] w-[20px] fill-white hover:fill-green hover:stroke-green"
@@ -47,7 +47,7 @@ export function Footer() {
               </a>
             </li>
             <li>
-              <a href="#twitter">
+              <a href="https://www.twitter.com">
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
                   className="h-[20px] w-[20px] fill-white hover:fill-green hover:stroke-green"
@@ -57,7 +57,7 @@ export function Footer() {
               </a>
             </li>
             <li>
-              <a href="#pinterest">
+              <a href="https://www.pinterest.com">
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
                   className="h-[20px] w-[20px] fill-white hover:fill-green hover:stroke-green"
@@ -67,7 +67,7 @@ export function Footer() {
               </a>
             </li>
             <li>
-              <a href="#instagram">
+              <a href="https://www.instagram.com">
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
                   className="h-[20px] w-[20px] fill-white hover:fill-green hover:stroke-green"
@@ -107,6 +107,23 @@ export function Footer() {
           <p className="text-gray-300">&copy; EasyBank. All Rights Reserved</p>
         </div>
       </footer>
+      <aside class="text-center bg-blue text-gray-300 text-[1rem]">
+        Challenge by
+        <a
+          class="hover:text-gray-100"
+          href="https://www.frontendmentor.io?ref=challenge"
+          target="_blank"
+        >
+          {' '}
+          Frontend Mentor
+        </a>
+        . Coded by
+        <a class=" hover:text-gray-100" href="https://www.twitter.com/darey_OG">
+          {' '}
+          Oludire Damilare
+        </a>
+        .
+      </aside>
     </>
   );
 }

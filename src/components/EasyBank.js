@@ -3,7 +3,7 @@ import { Bank } from './Bank';
 
 export function EasyBank() {
   return (
-    <div className="p-[1rem] bg-gray-200 desktop:p-[6.5rem] text-center">
+    <section className="p-[1rem] bg-gray-200 desktop:p-[6.5rem] text-center">
       <div className="font-light mb-10 justify-center items-center desktop:text-justify desktop:w-1/2">
         <h1 className="text-[3rem] mobile:text-[4rem] desktop:text-[2.85rem] mb-5">
           Why choose Easybank?
@@ -24,6 +24,6 @@ export function EasyBank() {
           />
         ))}
       </div>
-    </div>
+    </section>
   );
 }

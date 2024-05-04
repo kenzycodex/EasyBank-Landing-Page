@@ -2,7 +2,7 @@ import { RequestInvite } from './RequestInvite';
 
 export function Header() {
   return (
-    <div className="desktop:static h-auto w-full flex flex-col desktop:flex-row-reverse overflow-x-clip">
+    <header className="desktop:static h-auto w-full flex flex-col desktop:flex-row-reverse overflow-x-clip">
       <div className="w-full relative flex justify-center items-center ">
         <img src="./images/bg-intro-mobile.svg" alt="intro" className="w-full desktop:hidden" />
         <img
@@ -29,6 +29,6 @@ export function Header() {
           <RequestInvite />
         </div>
       </div>
-    </div>
+    </header>
   );
 }

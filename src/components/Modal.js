@@ -1,8 +1,8 @@
 export function Modal() {
   return (
-    <div className="text-center absolute z-10 top-[4.1rem] left-0 bg-blue/80 h-full w-full desktop:hidden">
-      <div className="fixed z-30 top-[15%] left-1/2 -translate-x-1/2 bg-white text-blue w-4/5 mx-auto py-8 tablet:py-10 rounded-md ">
-        <ul className="flex flex-col gap-6">
+    <section className=" fixed top-[4rem] left-0 z-10 backdrop-blur-lg bg-blue/80 h-full w-full desktop:hidden">
+      <nav className="fixed z-30 top-[25%] left-[50%] -translate-x-1/2 bg-white text-blue w-[80%] mx-auto py-8 md:py-10 rounded-lg ">
+        <ul className="flex flex-col items-center gap-6">
           <li>
             <a href="#home" className="hover:text-green/80">
               Home
@@ -29,7 +29,7 @@ export function Modal() {
             </a>
           </li>
         </ul>
-      </div>
-    </div>
+      </nav>
+    </section>
   );
 }
