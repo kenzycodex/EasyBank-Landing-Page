@@ -3,6 +3,7 @@ import { RequestInvite } from './RequestInvite';
 
 export function Nav({ isOpen, handlerOpen }) {
   return (
+    <>
       <div className="relative w-full h-[4rem] py-5 px-7 desktop:px-[6.5rem] flex bg-white bg-opacity-100 desktop:bg-opacity-100 justify-between items-center relative z-10">
         <div className="w-fit">
           <svg xmlns="http://www.w3.org/2000/svg" width="139" height="20">
@@ -69,7 +70,8 @@ export function Nav({ isOpen, handlerOpen }) {
             <img src="./images/icon-close.svg" alt="close" />
           )}
         </div>
-      {isOpen && <Modal />}
       </div>
+    {isOpen && <Modal />}
+  </>
   );
 }
