@@ -1,6 +1,5 @@
 export function Modal() {
-  return (<div className="relative">
-    
+  return (
     <div className="text-center absolute z-10 top-[4.1rem] left-0 bg-blue/80 h-full w-full desktop:hidden">
       <div className="fixed z-30 top-[15%] left-1/2 -translate-x-1/2 bg-white text-blue w-4/5 mx-auto py-8 tablet:py-10 rounded-md ">
         <ul className="flex flex-col gap-6">
@@ -32,6 +31,5 @@ export function Modal() {
         </ul>
       </div>
     </div>
-  </div>
   );
 }
