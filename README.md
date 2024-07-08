@@ -23,12 +23,12 @@ Users should be able to:
 
 ### Screenshot
 
-![](../Screenshot)
+![PAGE SCREENSHOT]()
 
 ### Links
 
-- Solution URL: https://github.com/dareyOG/EasyBank-Landing-Page
-- Live Site URL: https://easy-bank-landing-page0.vercel.app
+- [Solution URL]()
+- [Live Site URL](https://easy-bank-landing-page-henna.vercel.app)
 
 ## My process
 
@@ -43,5 +43,5 @@ Users should be able to:
 
 ## Author
 
-- Frontend Mentor - [@dareyOG](https://www.frontendmentor.io/profile/dareyOG)
-- Twitter - [@darey_OG](https://twitter.com/darey_OG)
+- Frontend Mentor - [@kenzycodex](https://www.frontendmentor.io/profile/kenzycodex)
+- Kenzy Codex Portfolio - [@kenzycodex](https://kenzycodex.vercel.app)
