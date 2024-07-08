@@ -24,7 +24,7 @@ Users should be able to:
 
 ### Screenshot
 
-![PAGE SCREENSHOT](publc/screenshot.png)
+![PAGE SCREENSHOT](public/screenshot.png)
 
 ### Links
 
