@@ -28,7 +28,7 @@ Users should be able to:
 
 ### Links
 
-- [Solution URL]()
+- [Solution URL](https://www.frontendmentor.io/solutions/easybank-landing-page-react-based-GHW04Mpcx4) 
 - [Live Site URL](https://easy-bank-landing-page-henna.vercel.app)
 
 ## My process
