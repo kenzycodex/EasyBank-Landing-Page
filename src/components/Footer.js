@@ -113,6 +113,7 @@ export function Footer() {
           class="hover:text-gray-100"
           href="https://www.frontendmentor.io?ref=challenge"
           target="_blank"
+          rel="noopener noreferrer"
         >
           {' '}
           Frontend Mentor
