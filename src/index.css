@@ -1,0 +1,20 @@
+@import url('https://fonts.googleapis.com/css2?family=Public+Sans:ital,wght@0,100..900;1,100..900&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.navBorder {
+  color: hsl(233, 8%, 62%);
+  transition-property: all;
+  transition-duration: 300ms;
+  transition-timing-function: ease-in;
+}
+
+.navBorder:hover {
+  color: hsl(233, 26%, 24%);
+  border-bottom: 4px solid;
+  border-image: linear-gradient(to right, hsl(136, 65%, 51%) 45%, hsl(192, 70%, 51%) 55%);
+  border-image-slice: 1;
+  padding-bottom: 1.2rem;
+}
