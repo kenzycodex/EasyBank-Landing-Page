@@ -1,7 +1,8 @@
-# Frontend Mentor - Easybank landing page solution
+# Easybank Landing Page (React-based)
 
 This is a solution to the [Easybank landing page challenge on Frontend Mentor](https://www.frontendmentor.io/challenges/easybank-landing-page-WaUhkoDN). Frontend Mentor challenges help you improve your coding skills by building realistic projects.
 
+Take your financial life online. Your Easybank account will be a one-stop-shop for spending, saving, budgeting, investing, and much more.
 ## Table of contents
 
 - [Overview](#overview)
@@ -23,7 +24,7 @@ Users should be able to:
 
 ### Screenshot
 
-![PAGE SCREENSHOT]()
+![PAGE SCREENSHOT](./public/screenshot.png)
 
 ### Links
 
