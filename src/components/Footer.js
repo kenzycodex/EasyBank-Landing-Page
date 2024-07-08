@@ -118,9 +118,9 @@ export function Footer() {
           Frontend Mentor
         </a>
         . Coded by
-        <a class=" hover:text-gray-100" href="https://www.twitter.com/darey_OG">
+        <a class=" hover:text-gray-100" href="https://kenzycodex.vercel.app">
           {' '}
-          Oludire Damilare
+          Kenzy Codex
         </a>
         .
       </aside>
